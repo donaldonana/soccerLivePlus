@@ -1,0 +1,310 @@
+
+{% load static %}
+
+<link rel="stylesheet" type="text/css" href="{% static 'presentation/machts.css' %}">
+<!--===============================================================================================-->	
+	<link rel="icon" type="image/png" href="{% static 'presentation/images/icons/favicon.ico' %}"  />
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css"  href="{% static 'presentation/vendor/bootstrap/css/bootstrap.min.css' %}">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="{% static 'presentation/fonts/font-awesome-4.7.0/css/font-awesome.min.css' %}">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css"  href="{% static 'presentation/vendor/animate/animate.css' %}">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css"  href="{% static 'presentation/vendor/select2/select2.min.css' %}">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="{% static 'presentation/vendor/perfect-scrollbar/perfect-scrollbar.css' %}">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="{% static 'presentation/css/util.css' %}">
+	<link rel="stylesheet" type="text/css" href="{% static 'presentation/css/main.css' %}">
+	<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+<!--===============================================================================================-->
+<!-- <link rel="stylesheet" type="text/css" href="{% static 'presentation/bootstraps/dist/css/bootstrap.css' %}"> -->
+
+<!-- <div class="container"> -->
+<!-- <table class="table" style="">
+	<tr> <td style="padding: 25px; border-top: 1px solid white; font-size: 20px; color: orange;"><strong>1er journée</strong>  </td></tr>
+
+	{% for match in matchs %}
+	<tr>
+	<td style=" border-top: 1px solid white; padding-right: 300px;"><img src="<?php echo $pays2['dpr_int'] ?> "alt="ordi">{{match.equipe_int.club_name}}</td>
+	<td style="text-align: center; border-top: 1px solid white; padding-right: 380px; ">0  -  1</td>
+	<td style=" border-top: 1px solid white;"><img src="<?php echo $pays2['dpr_ext'] ?>"alt="ordi">{{match.equipe_ext.club_name}}</td>
+	</tr>
+	{% endfor %}
+
+</table> -->
+<!-- <body> -->
+	
+	<div class="limiter">
+		<div class="container-table100">
+			<div class="wrap-table100">
+				
+			
+				<div class="table100 ver3 m-b-110">
+					<div class="table100-head">
+						<table>
+							<thead>
+								<tr class="row100 head">
+									<th class="cell100 column1">position</th>
+									<th class="cell100 column2">equipe</th>
+									<th class="cell100 column3">MJ</th>
+									<th class="cell100 column4">DB</th>
+									<th class="cell100 column5">PTS</th>
+								</tr>
+							</thead>
+						</table>
+					</div>
+
+					<div class="table100-body js-pscroll">
+						<table>
+							<tbody>
+								{% for classement in classements %}
+								<tr class="row100 body">
+									<td class="cell100 column1">{{ forloop.counter }}.</td>
+									<td class="cell100 column2">{{classement.club.club_name}}</td>
+									<td class="cell100 column3">{{classement.match_joue}}</td>
+									<td class="cell100 column4">{{classement.db}}</td>
+									<td class="cell100 column5">{{classement.nbr_point}}</td>
+								</tr>
+								{% endfor %}
+
+								<tr class="row100 body">
+									<td class="cell100 column1">1.</td>
+									<td class="cell100 column2">Barcelone</td>
+									<td class="cell100 column3">3</td>
+									<td class="cell100 column4">+9</td>
+									<td class="cell100 column5">9</td>
+								</tr>
+
+								<tr class="row100 body">
+									<td class="cell100 column1">1.</td>
+									<td class="cell100 column2">Barcelone</td>
+									<td class="cell100 column3">3</td>
+									<td class="cell100 column4">+9</td>
+									<td class="cell100 column5">9</td>
+								</tr>
+
+								<tr class="row100 body">
+									<td class="cell100 column1">1.</td>
+									<td class="cell100 column2">Barcelone</td>
+									<td class="cell100 column3">3</td>
+									<td class="cell100 column4">+9</td>
+									<td class="cell100 column5">9</td>
+								</tr>
+
+								<tr class="row100 body">
+									<td class="cell100 column1">1.</td>
+									<td class="cell100 column2">Barcelone</td>
+									<td class="cell100 column3">3</td>
+									<td class="cell100 column4">+9</td>
+									<td class="cell100 column5">9</td>
+								</tr>
+
+								<tr class="row100 body">
+									<td class="cell100 column1">1.</td>
+									<td class="cell100 column2">Barcelone</td>
+									<td class="cell100 column3">3</td>
+									<td class="cell100 column4">+9</td>
+									<td class="cell100 column5">9</td>
+								</tr>
+
+								<tr class="row100 body">
+									<td class="cell100 column1">1.</td>
+									<td class="cell100 column2">Barcelone</td>
+									<td class="cell100 column3">3</td>
+									<td class="cell100 column4">+9</td>
+									<td class="cell100 column5">9</td>
+								</tr>
+
+								<tr class="row100 body">
+									<td class="cell100 column1">1.</td>
+									<td class="cell100 column2">Barcelone</td>
+									<td class="cell100 column3">3</td>
+									<td class="cell100 column4">+9</td>
+									<td class="cell100 column5">9</td>
+								</tr>
+
+								<tr class="row100 body">
+									<td class="cell100 column1">1.</td>
+									<td class="cell100 column2">Barcelone</td>
+									<td class="cell100 column3">3</td>
+									<td class="cell100 column4">+9</td>
+									<td class="cell100 column5">9</td>
+								</tr>
+
+								<tr class="row100 body">
+									<td class="cell100 column1">1.</td>
+									<td class="cell100 column2">Barcelone</td>
+									<td class="cell100 column3">3</td>
+									<td class="cell100 column4">+9</td>
+									<td class="cell100 column5">9</td>
+								</tr>
+
+								<tr class="row100 body">
+									<td class="cell100 column1">1.</td>
+									<td class="cell100 column2">Barcelone</td>
+									<td class="cell100 column3">3</td>
+									<td class="cell100 column4">+9</td>
+									<td class="cell100 column5">9</td>
+								</tr>
+
+								<tr class="row100 body">
+									<td class="cell100 column1">1.</td>
+									<td class="cell100 column2">Barcelone</td>
+									<td class="cell100 column3">3</td>
+									<td class="cell100 column4">+9</td>
+									<td class="cell100 column5">9</td>
+								</tr>
+
+								<tr class="row100 body">
+									<td class="cell100 column1">1.</td>
+									<td class="cell100 column2">Barcelone</td>
+									<td class="cell100 column3">3</td>
+									<td class="cell100 column4">+9</td>
+									<td class="cell100 column5">9</td>
+								</tr>
+
+								<tr class="row100 body">
+									<td class="cell100 column1">1.</td>
+									<td class="cell100 column2">Barcelone</td>
+									<td class="cell100 column3">3</td>
+									<td class="cell100 column4">+9</td>
+									<td class="cell100 column5">9</td>
+								</tr>
+
+								<tr class="row100 body">
+									<td class="cell100 column1">1.</td>
+									<td class="cell100 column2">Barcelone</td>
+									<td class="cell100 column3">3</td>
+									<td class="cell100 column4">+9</td>
+									<td class="cell100 column5">9</td>
+								</tr>
+
+								<tr class="row100 body">
+									<td class="cell100 column1">1.</td>
+									<td class="cell100 column2">Barcelone</td>
+									<td class="cell100 column3">3</td>
+									<td class="cell100 column4">+9</td>
+									<td class="cell100 column5">9</td>
+								</tr>
+
+								<tr class="row100 body">
+									<td class="cell100 column1">1.</td>
+									<td class="cell100 column2">Barcelone</td>
+									<td class="cell100 column3">3</td>
+									<td class="cell100 column4">+9</td>
+									<td class="cell100 column5">9</td>
+								</tr>
+
+								<tr class="row100 body">
+									<td class="cell100 column1">1.</td>
+									<td class="cell100 column2">Barcelone</td>
+									<td class="cell100 column3">3</td>
+									<td class="cell100 column4">+9</td>
+									<td class="cell100 column5">9</td>
+								</tr>
+
+								<tr class="row100 body">
+									<td class="cell100 column1">1.</td>
+									<td class="cell100 column2">Barcelone</td>
+									<td class="cell100 column3">3</td>
+									<td class="cell100 column4">+9</td>
+									<td class="cell100 column5">9</td>
+								</tr>
+
+								<tr class="row100 body">
+									<td class="cell100 column1">1.</td>
+									<td class="cell100 column2">Barcelone</td>
+									<td class="cell100 column3">3</td>
+									<td class="cell100 column4">+9</td>
+									<td class="cell100 column5">9</td>
+								</tr>
+
+								<tr class="row100 body">
+									<td class="cell100 column1">1.</td>
+									<td class="cell100 column2">Barcelone</td>
+									<td class="cell100 column3">3</td>
+									<td class="cell100 column4">+9</td>
+									<td class="cell100 column5">9</td>
+								</tr>
+
+								<tr class="row100 body">
+									<td class="cell100 column1">1.</td>
+									<td class="cell100 column2">Barcelone</td>
+									<td class="cell100 column3">3</td>
+									<td class="cell100 column4">+9</td>
+									<td class="cell100 column5">9</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+				</div>
+
+			</div>
+		</div>
+	</div>
+
+	<div class="container">
+
+	
+
+				<table class="table" style="margin-left: 30px; margin-bottom: 70px; ">
+  <thead>
+    <tr>
+      <td style="border: none; ">#</td>
+      <td style="border: none;  width: 25%;"><strong>First Team</strong></td>
+      <td style="border: none; width: 40%;"><strong>Score</strong></td>
+      <td style="border: none; width: 40%"><strong>Second Team</strong></td>
+    </tr>
+  </thead>
+  {% for match in matchs %}
+    <tr>
+      <td style="border: none; ">#</td>
+      <td style="border: none;  width: 25%;">{{match.equipe_int.club_name}}</td>
+      <td style="border: none; width: 40%;">{{match.score_int}} - {{match.score_ext}}</td>
+      <td style="border: none; width: 40%">{{match.equipe_ext.club_name}}</td>
+    </tr>
+   {% endfor %}
+    <tr>
+      <td style="border: none; ">#</td>
+      <td style="border: none;  width: 25%;">RealMadrid</td>
+      <td style="border: none; width: 40%;">0 - 2</td>
+      <td style="border: none; width: 40%">Barcelone</td>
+    </tr>
+     <tr>
+      <td style="border: none; ">#</td>
+      <td style="border: none;  width: 25%;">RealMadrid</td>
+      <td style="border: none; width: 40%;">0 - 2</td>
+      <td style="border: none; width: 40%">Barcelone</td>
+    </tr>
+   
+
+</table>
+</div>
+<!-- </body> -->
+<!-- </div> -->
+
+<!--===============================================================================================-->	
+	<script src= "{% static 'presentation/vendor/jquery/jquery-3.2.1.min.js' %}" ></script>
+<!--===============================================================================================-->
+	<script src= "{% static 'presentation/vendor/bootstrap/js/popper.js' %}" > </script>
+	<script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+<!--===============================================================================================-->
+	<script src= "{% static 'presentation/vendor/select2/select2.min.js' %}"></script>
+<!--===============================================================================================-->
+	<script src= "{% static 'presentation/vendor/perfect-scrollbar/perfect-scrollbar.min.js' %}"></script>
+	<script>
+		$('.js-pscroll').each(function(){
+			var ps = new PerfectScrollbar(this);
+
+			$(window).on('resize', function(){
+				ps.update();
+			})
+		});
+			
+		
+	</script>
+<!--===============================================================================================-->
+	<script src="js/main.js"></script>
+
